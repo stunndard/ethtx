@@ -1,0 +1,6 @@
+---
+  Gzip: true
+  Other:
+    listen: ":8070"
+    redactLogs: true
+    
