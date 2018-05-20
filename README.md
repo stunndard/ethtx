@@ -4,6 +4,12 @@
 `ethtx` is a small, stateless and portable microservice for generating Ethereum addresses and signing Ethereum transactions without the dedicated Ethereum node.
 It comes extremely handy when you need to create Ethereum addresses (private/public key pair) or sign Ethereum transactions using a programming language that doesn't have the required crypto libraries.
 
+Also it improves the security, because you don't need to call the remote Ethereum RPC node and send your private keys to it in order to just generate a new Ethereum address or sign your transaction.
+
+That way the private keys won't ever leave the local host where your service or software is running.
+
+`ethtx` consumes minimum of system resources and can be run on the local host together with your service or even desktop software.
+
 ## How it works?
 It works as a HTTP service. You POST parameters and get a JSON response.
 
@@ -96,7 +102,7 @@ Any that Go can compile for.
 ## What is required?
 Just Go.
 
-## How do I install goicy?
+## How do I install ethtx?
 The `go get` command will automatically fetch all dependencies required, compile the binary and place it in your $GOPATH/bin directory.
 
     go get github.com/stunndard/ethtx
